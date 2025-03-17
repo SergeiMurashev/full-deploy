@@ -14,6 +14,7 @@ func main() {
 	}
 
 	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Welcome to the health check")
 		fmt.Fprintf(w, "Server is up and running frontend and backend")
 	})
 
